@@ -9,6 +9,8 @@ Disks will automatically be ejected once they're finished and newly inserted dis
 # Disclaimer
 This script has only been tested on Ubuntu 20.04.01. Whilst it might work with other systems, I can't guarantee for it.
 
+2023-10-11: Tested on arch based distro (yay package manager)
+
 # Installation:
 This script depends on some external packages.
 You can ensure they're installed and on the latest version by running this command:
