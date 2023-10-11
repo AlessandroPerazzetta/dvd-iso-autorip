@@ -4,7 +4,38 @@ scriptroot=$(dirname $(realpath $0))
 # Check dependencies
 deps=("printf|fprintd" "setcd|setcd" "sed|sed" "blkid|util-linux" "dd|coreutils")
 missingdeps=""
-missingdepsinstall="sudo apt install"
+# missingdepsinstall="sudo apt install"
+missingdepsinstall=""
+
+OS=$(uname -s | tr A-Z a-z)
+case $OS in
+  linux)
+    source /etc/os-release
+    case $ID_LIKE in
+      debian|ubuntu|mint)
+        missingdepsinstall="sudo apt install"
+        ;;
+
+      fedora|rhel|centos)
+        missingdepsinstall="sudo yum install"
+        ;;
+      arch)
+        missingdepsinstall="yay -S"
+        ;;
+      *)
+        echo -n "unsupported linux package manager"
+        ;;
+    esac
+  ;;
+
+  darwin)
+    missingdepsinstall="brew install"
+  ;;
+
+  *)
+    echo -n "unsupported OS"
+    ;;
+esac
 
 for dep in "${deps[@]}"; do
 	if ! type $(echo "$dep" | cut -d\| -f1) &> /dev/null; then

@@ -26,13 +26,14 @@ This will rip the disc the same way as with the wrapper, but just once, without 
 
 
 # Additions from original version:
-New filename suffix switch based on args, (default) numeric autoincrement indexing if file exist, or date time:
+- New filename suffix switch based on args, (default) numeric autoincrement indexing if file exist, or date time:
 
-- Index trigger:
-    - `bash wrapper.sh [index||none]`
-    - `bash isorip.sh /dev/sr0 [index||none]`
+    - Index trigger:
+        - `bash wrapper.sh [index||none]`
+        - `bash isorip.sh /dev/sr0 [index||none]`
 
-- Date trigger:
-    - `bash wrapper.sh date`
-    - `bash isorip.sh /dev/sr0 date`
+    - Date trigger:
+        - `bash wrapper.sh date`
+        - `bash isorip.sh /dev/sr0 date`
 
+- Support for multiple Linux distro and MacOS package manager
