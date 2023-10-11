@@ -1,5 +1,5 @@
 # DVD-ISO-AutoRip 
-Based on [ThisIsTenou/bluray-iso-autorip] (https://github.com/ThisIsTenou/bluray-iso-autorip)
+Based on [ThisIsTenou/bluray-iso-autorip](https://github.com/ThisIsTenou/bluray-iso-autorip)
 
 A bash script for automatically creating ISOs from any kind of data disc (like DVDs, BluRays or file discs).
 It has been written with the focus on parallelization, so that you can rip from multiple drives at once.
